@@ -1,56 +1,68 @@
-$siteAColor = #ffffff
-$siteABgColor = #F03838
-$siteDescColor = #9e9e9e
+@import 'color'
 
-header
-  line-height 1.8rem
+header {
+  line-height: 1rem;
 
-  .site-branding
-    text-align center
-    margin-bottom 2rem
-    font-family "Open Sans", arial, sans-serif
-    letter-spacing 0.1em
-    text-transform uppercase
+  .site-branding {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: Comic Sans MS, Comic Sans, Bradley Hand, Apple Chancery, cursive;
+    letter-spacing: 0.2em;
 
-    .site-title
-      margin 0
-      font-size 1.4rem
+    .site-title {
+      margin: 0;
+      font-size: 2.4rem;
+      font-style: italic
 
-      a
-        display inline-block
-        color $siteAColor
-        font-weight bolder
-        background-color $siteABgColor
-        line-height 3rem
-        height 3rem
-        padding 0 1rem
-        -webkit-transition padding 0.3s ease-out
-        transition padding 0.3s ease-out
+      a {
+        display: inline-block;
+        color: $textBrand;
+        font-weight: bold;
+        background-color: $themeRed;
+        line-height: 2.6rem;
+        height: 3.2rem;
+        padding: 0.2rem 1.5rem;
+        -webkit-transition: padding 0.3s ease-out;
+        transition: padding 0.3s ease-out;
 
-        &:hover
-          padding: 0 1.5rem
+        &:hover {
+          padding: 0.2rem 3rem;
+        }
+      }
+    }
 
-    .site-description
-      color $siteDescColor
-      font-size 1.3rem
-      margin 1rem 0 0
+    .site-description {
+      color: $textTime;
+      font-size: 1.6rem;
+      margin: 0.4em 0 0;
+    }
+  }
 
-  .site-navigation
-    text-align center
+  .site-navigation {
+    text-align: center;
 
-    ul
-      list-style none
-      padding 0
-      margin 0
-      font-size 1.6em
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.6em;
 
-      li
-        display inline-block
-        margin 0 0.5rem
+      li {
+        display: inline-block;
+        margin: 0 0.5rem;
 
-        a
-          display block
-          color $siteABgColor
-          font-size 1.6rem
-          line-height 2rem
-          padding 0 1rem
+        a {
+          display: block;
+          color: $textTimeHover;
+          font-size: 1.6rem;
+          line-height: 2rem;
+          padding: 0 1rem;
+
+          &:hover {
+            color: $textTime;
+          }
+        }
+      }
+    }
+  }
+}

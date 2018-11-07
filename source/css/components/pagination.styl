@@ -1,8 +1,6 @@
-$paginationRed = #f03838
-$paginationWhite = #fff
+@import 'color';
 
-
-.pagination
+.pagination {
   position: relative;
   margin: 30px 0;
   display: -webkit-box;
@@ -14,11 +12,10 @@ $paginationWhite = #fff
   -webkit-justify-content: space-around;
   justify-content: space-around;
 
-  .pagination-prev
-  .pagination-next
-    color $paginationRed
-    font-size 1.6rem
-    border: 1px solid #e0e0e0;
+  .pagination-prev, .pagination-next {
+    color: $themeRed;
+    font-size: 1.6rem;
+    border: 1px solid $divider;
     line-height: 30px;
     height: 32px;
     padding: 0 20px;
@@ -26,7 +23,10 @@ $paginationWhite = #fff
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 
-    &:hover
-      color: $paginationWhite;
-      background-color: $paginationRed;
-      border-color: $paginationRed;
+    &:hover {
+      color: $bgContent;
+      background-color: $themeRed;
+      border-color: $themeRed;
+    }
+  }
+}

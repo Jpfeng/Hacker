@@ -1,27 +1,27 @@
 <article>
-  <h2 class="article-title <% if (page.category){ %> category<% } else if (page.category){ %> category<% } %>">
+  <h2 class="article-title <% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>">
     <%= page.title || config.title %>
   </h2>
 
-  <div class="categories-cloud">
-    <% site.categories.sort('name').map(function(category){  %>
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-      <a href="<%= url_for(category.path) %>" title="<%= category.name %>" rel="<%= category.length %>">
-        <%= category.name %></a>
+  <div class="tags-cloud">
+    <% site.tags.sort('name').map(function(tag){  %>
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+      <a href="<%= url_for(tag.path) %>" title="<%= tag.name %>" rel="<%= tag.length %>">
+        <%= tag.name %></a>
     </span>
     <% }) %>
   </div>
 
   <div class="archive">
-    <% site.categories.sort('name').map(function(category){  %>
-    <div class="archive-categories">
-      <span class="post-categories">
-        <i class="icon-categories"></i>
-        <a href="<%= url_for(category.path) %>" title="<%= category.name %>" rel="<%= category.length %>">
-          <%= category.name %></a>
+    <% site.tags.sort('name').map(function(tag){  %>
+    <div class="archive-tags">
+      <span class="post-tags">
+        <i class="icon-tags"></i>
+        <a href="<%= url_for(tag.path) %>" title="<%= tag.name %>" rel="<%= tag.length %>">
+          <%= tag.name %></a>
       </span>
-      <% category.posts.sort('-date').map(function(item){  %>
+      <% tag.posts.sort('-date').map(function(item){  %>
       <div class="<%= item.layout %> archive">
         <div class="archive-post">
           <time datetime="<%= item.date.toDate().toISOString() %>">

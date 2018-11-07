@@ -1,6 +1,8 @@
 menu:
   Home: /
   Archives: /archives
+  Tags: /tags
+  Categories: /categories
 
 # gitment
 gitment: false
@@ -13,5 +15,9 @@ gitment_client_secret:
 disqus: false
 disqus_shortname:
 
+# LiveRe 来必力
+livere: false
+livere_data_uid: 
+
 # google analytics
-googleTrackId:
+googleTrackId: 

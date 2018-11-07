@@ -1,40 +1,38 @@
-// vari
-$bodyBgColor = #f7f7f7
-$mainBgColor = #ffffff
+@import 'color';
 
-html
-  font-size 10px
-  -webkit-text-size-adjust 100%
+html {
+  font-size: 10px;
+  -webkit-text-size-adjust: 100%;
+}
 
-p
-h1
-h2
-h3
-h4
-h5
-h6
-  margin 0
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
 
-a
-  text-decoration none
+a {
+  text-decoration: none;
+}
 
+// 页面样式
+body {
+  background-color: $bg;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 
-body
-  background-color $bodyBgColor
-  font-family "Segoe UI", "Lucida Grande", Helvetica, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif
-  -moz-osx-font-smoothing grayscale
-  -webkit-font-smoothing antialiased
-  overflow-x hidden
+  .blog {
+    max-width: 1280px;
+    min-height: 100vh;
+    background-color: $bgContent;
+    margin: 0 auto;
 
-  .blog
-    max-width 1170px
-    min-height 100vh
-    background-color $mainBgColor
-    margin: 0 auto
-
-    .content
-      box-sizing border-box
-      max-width 770px
-      width 100%
-      padding: 80px 10px 10px;
-      margin 0 auto
+    .content {
+      box-sizing: border-box;
+      max-width: 960px;
+      width: 100%;
+      padding: 60px 0 20px;
+      margin: 0 auto;
+    }
+  }
+}

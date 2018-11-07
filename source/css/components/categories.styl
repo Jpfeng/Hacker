@@ -1,57 +1,74 @@
-$hackerRed = #f03838
-$hackerGray = #9e9e9e
+@import 'color';
 
-article
-  .categories-cloud
-    width 100%
-    margin 8rem 0
-    text-align center
-    line-height 2rem
+article {
+  .categories-cloud {
+    width :80%;
+    margin: 2rem auto 8rem;
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
 
-  .categories-cloud > spannot(last-child)
-    margin-right 3rem
+    i {
+      margin-left: 1rem;
+    }
 
-  .categories-cloud > span
-    display inline-block
+    a {
+      color: $themeRed;
+      text-align: center;
+      margin-right: 1rem;
 
-  .categories-cloud > span > span
-    line-height 1
-    vertical-align middle
+      &:hover {
+        color: $textTime;
+      }
+    }
 
-  .archive-categories
+    .post-categories {
+      text-align: center;
+      flex:1 1 auto;
+    }
+  }
 
-  .archive-categories > spannot(last-child)
-    margin-right 3rem
+  .archive {
+    display: block;
 
-  .archive-categories > span
-    display inline-block
+    .archive-categories {
+      color: $textTime;
+      text-align: center;
+      position: relative;
+      padding: 4rem 0 0 0;
 
-  .archive-categories > span > span
-    line-height 1
-    vertical-align middle
+      &:not(:first-child):before {
+        content: '';
+        width: 360px;
+        height: 1px;
+        background-color: $divider;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -180px;
+      }
 
-  .archive-categories, .categories-cloud
-    margin 8rem 0
-    font-size 1.3rem
-    color #9e9e9e
+      i {
+        margin-right: 0.4rem;
+      }
 
-    a
-      color $hackerGray
-      &:hover
-        color $hackerRed
+      .post-categories {
 
-    i
-      vertical-align middle
-      color #9e9e9e
-      margin-right 0.5rem
+        a {
+          color: $themeRed;
+          font-size: 2rem;
 
-    .post-categories
-      margin-right 3rem
-
-      a
-        &:before
-          content "#"
-
-        &:not(:last-of-type):after
-          content ","
-          padding-right 5px
+          &:hover {
+            color: $textTime;
+          }
+        }
+      }
+    }
+  }
+}
